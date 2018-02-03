@@ -4,12 +4,14 @@
 You tired of doing a million callbacks, giant `Retrofit.Callback` interface implementations? `Comfortable Downloader` offers really short way to load several objects that have identifiers.
 
 ## Features:
-- **[One callback for all items]**: pass several id's to the `query()` method and `Comfortable Downloader` will asynchronously load each item for you. You will be notified when the download is complete.
-- **[Automatic caching]**: if item id was already loaded, than you will receive it immidiately without requesting from the network. If at some point you need to preventive download item directly from the server, you can use `refresh()` method;
-- **[Automatic saving into the local database]**: each item will be saved to local database after loading;
-- **[Automatic reading from the local database]**, if there are some problems with loading (e.g. no internet connection), item can be read from local database;
-- **[Automatic casts]**: in case if you load from server just a model-object, `ComfortableDownloader` can cast it to needed type;
-- **[No memory leaks]**: after loading finished each callback will be cleared, moreover cached items will continue to be availiable.
+| Feature | Description |
+| --- | --- |
+| **One callback for all items** | Pass several id's to the `query()` method and `Comfortable Downloader` will asynchronously load each item for you. You will be notified when the download is complete. |
+| **Automatic caching** | If item id was already loaded, than you will receive it immidiately without requesting from the network. If at some point you need to preventive download item directly from the server, you can use `refresh()` method. |
+| **Automatic saving into the local database** | Each item will be saved to local database after loading. |
+| **Automatic reading from the local database** | If there are some problems with loading (e.g. no internet connection), item can be read from local database. |
+| **Automatic casts** | In case if you load from server just a model-object, `ComfortableDownloader` can cast it to the needed type. |
+| **No memory leaks** | After loading finished each callback will be cleared, moreover cached items will continue to be availiable. |
 
 ## Installation
 ### Step 1
