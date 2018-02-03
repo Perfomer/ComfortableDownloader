@@ -84,17 +84,17 @@ protected void read(String id) {
 }
 ```
 ### Step 4
-Create a downloader object and just `query` needed items. This method taskes the following arguments:
+Create a downloader object:
+```java
+UserDownloader userDownloader = new UserDownloader();
+```
+And just `query` needed items. This method taskes the following arguments:
 
 | Argument Type | Optional | Description |
 | --- | :---: | --- |
 | `SuccessListener<UserModel, String>` | ❌ | Callback will notify you when all items are loaded and give you loaded items. |
 | `FailureListener<String>` | ✔️ | Callback will notify you when some of items aren't loaded and give you Map<String, Throwable> with keys and failure reasons for each key. |
 | `String...` or `Collection<String>` | ❌ | The list of keys that you want to download. It can be vararg or collection. |
-
-```java
-UserDownloader userDownloader = new UserDownloader();
-```
 
 If you use Java 8 or higher you can use lambdas:
 ```java
@@ -105,8 +105,6 @@ userDownloader.query(this::doAnythingYouWant, "405", "406", "407", "admin#012");
 ```
 If your Java version lower than 8, you can use anonymous class:
 ```java
-UserDownloader userDownloader = new UserDownloader();
-
 userDownloader.query(new SuccessListener<UserModel, String>() {
     @Override
     public void onLoaded(@NonNull List<UserModel> userModels) {
