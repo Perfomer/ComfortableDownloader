@@ -18,14 +18,14 @@ You tired of doing a million callbacks, giant `Retrofit.Callback` interface impl
 Add repository to your `gradle.build` file __(project module)__
 ```gradle
 repositories {
- jcenter()
+  jcenter()
 }
 ```
 ### Step 2
 Add dependency to your `gradle.build` file __(app module)__
 ```gradle
 dependencies {
-  compile 'com.github.perfomer:comfortable-downloader:LATEST_VERSION'
+   compile 'com.github.perfomer:comfortable-downloader:LATEST_VERSION'
 }
 ```
 See the last release version here: [[LATEST_VERSIONS]](https://github.com/Perfomer/ComfortableDownloader/releases).
@@ -39,11 +39,13 @@ public class UserModel implements Entity<String> {
   private String mId;
 
   ...
-
+  
+  @Override
   public void getEntityKey() {
     return mId;
   }
-
+  
+  @Override
   public void setEntityKey(String key) {
     mId = key;
   }
