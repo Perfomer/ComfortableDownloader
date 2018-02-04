@@ -1,5 +1,5 @@
 # Comfortable Downloader
-**Comfortable Downloader is the very simple and light-weight library representive an abstract loader based on <i>[Retrofit 2](https://github.com/square/retrofit)</i>.**
+**Comfortable Downloader is the very simple and light-weight library representive an abstract loader based on <i>[`Retrofit 2`](https://github.com/square/retrofit)</i>.**
 
 You tired of doing a million callbacks, giant `Retrofit.Callback` interface implementations? `Comfortable Downloader` offers really short way to load several objects that have identifiers.
 
