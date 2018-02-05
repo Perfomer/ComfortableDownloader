@@ -7,7 +7,7 @@ You tired of doing a million callbacks, giant `Retrofit.Callback` interface impl
 |  | Feature | Description |
 | --- | --- | --- |
 | 👍 | **One callback for all items** | Pass several id's to the `query()` method and `Comfortable Downloader` will asynchronously load each item for you. You will be notified when the download is complete. |
-| 👍 | **Automatic caching** | If item id was already loaded, than you will receive it immidiately without requesting from the network. If at some point you need to preventive download item directly from the server, you can use `refresh()` method. |
+| 👍 | **Automatic caching** | If the item with this ID has already been downloaded, you will receive it without querying from the network. If at some point you need to force load item directly from the server, you can use the `refresh()` method. |
 | 👍 | **Automatic saving into the local database** | Each item will be saved to local database after loading. |
 | 👍 | **Automatic reading from the local database** | If there are some problems with loading (e.g. no internet connection), item can be read from local database. |
 | 👍 | **Automatic casts** | In case if you load from server just a model-object, `ComfortableDownloader` can cast it to the needed type. |
