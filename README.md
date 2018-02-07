@@ -41,7 +41,7 @@ public class UserModel implements Entity<String> {
   ...
   
   @Override
-  public void getEntityKey() {
+  public String getEntityKey() {
     return mId;
   }
   
